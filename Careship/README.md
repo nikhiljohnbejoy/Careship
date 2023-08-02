@@ -1,18 +1,52 @@
-# Salesforce DX Project: Next Steps
+# Salesforce Project: Careship Technical Assignment
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+This is the github repository for the development of the below user story.
 
-## How Do You Plan to Deploy Your Changes?
+## Create a Lightning web component that uses @wire in an Apex controller to retrieve contact records. Display the contact records in a lightning-datatable.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+1.1: Create an Apex controller that retrieves a list of contacts:
 
-## Configure Your Salesforce DX Project
+● Class: ContactController
+● Method: getContacts()
+● Fields to query: FirstName, LastName, Email
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+1.2 : Create a Lightning web component that displays contacts in a table:
 
-## Read All About It
+● Component name: contactList
+● Base component: lightning-datatable
+● Fields to include: FirstName, LastName, Email
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+1.3: Wire the getContacts() method
+
+1.4: Add the component to a new App page
+
+## Tasks assosiated with the user story
+
+The user story can be divided into the following tasks and subtasks.
+
+**TASKS**:
+1. Creation of the Apex controller class for the retrieval of the contact information.<br/>
+   _Subtasks_
+
+   - [x] Create Apex class `ContactController`.
+   - [x] Create Apex test class `ContactControllerTest`.
+   - [] Create function `getContacts()` which would return a list of queried contacts with relevant fields(FirstName, LastName, Email).
+   - [] Apex test class to validate the functionality.
+   - [] _Optional_ Function `getContacts()` takes parameters for pagination.
+   - [] _Optional_ Function `getContacts()` takes parameters for search filtering.
+
+2. Creation of the `contactList` lightning web component.<br/>
+   _Subtasks_
+
+   - [] Create the LWC component `contactList`.
+   - [] Wire the `getContacts()` function to retrieve the list of contacts to display.
+   - [] Use lightning-datatable component to display the list of queried contacts.
+   - [] _Optional_ : Sort records by any column in the list.
+   - [] _Optional_ : Add Pagination to the list.
+   - [] _Optional_ : Search filter based on one of the three fields.
+
+3. Creation of a App Page<br/>
+   _Subtasks_
+
+   - [] Create an App page.
+   - [] Add the LWC component `contactList` to the flexi page.
