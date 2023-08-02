@@ -30,7 +30,7 @@ The user story can be divided into the following tasks and subtasks.
 
    - [x] Create Apex class `ContactController`.
    - [x] Create Apex test class `ContactControllerTest`.
-   - [] Create function `getContacts()` which would return a list of queried contacts with relevant fields(FirstName, LastName, Email).
+   - [x] Create function `getContacts()` which would return a list of queried contacts with relevant fields(FirstName, LastName, Email).
    - [] Apex test class to validate the functionality.
    - [] _Optional_ Function `getContacts()` takes parameters for pagination.
    - [] _Optional_ Function `getContacts()` takes parameters for search filtering.
