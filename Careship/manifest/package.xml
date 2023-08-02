@@ -5,5 +5,13 @@
         <members>ContactControllerTest</members>
         <name>ApexClass</name>
     </types>
+    <types>
+        <members>contactList</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>Careship_Contacts</members>
+        <name>FlexiPage</name>
+    </types>
     <version>55.0</version>
 </Package>

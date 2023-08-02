@@ -38,9 +38,9 @@ The user story can be divided into the following tasks and subtasks.
 2. Creation of the `contactList` lightning web component.<br/>
    _Subtasks_
 
-   - [] Create the LWC component `contactList`.
-   - [] Wire the `getContacts()` function to retrieve the list of contacts to display.
-   - [] Use lightning-datatable component to display the list of queried contacts.
+   - [x] Create the LWC component `contactList`.
+   - [x] Wire the `getContacts()` function to retrieve the list of contacts to display.
+   - [x] Use lightning-datatable component to display the list of queried contacts.
    - [] _Optional_ : Sort records by any column in the list.
    - [] _Optional_ : Add Pagination to the list.
    - [] _Optional_ : Search filter based on one of the three fields.
@@ -48,5 +48,5 @@ The user story can be divided into the following tasks and subtasks.
 3. Creation of a App Page<br/>
    _Subtasks_
 
-   - [] Create an App page.
-   - [] Add the LWC component `contactList` to the flexi page.
+   - [x] Create an App page.
+   - [x] Add the LWC component `contactList` to the flexi page.
