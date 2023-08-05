@@ -1,4 +1,8 @@
-.border-design{
-    border:5px solid lavender;
+.border-design {
+    border: 5px solid lavender;
     border-radius: 16px;
+}
+
+.list-design {
+    height: 12rem;
 }

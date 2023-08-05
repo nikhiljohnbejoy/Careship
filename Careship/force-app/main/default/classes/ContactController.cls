@@ -21,16 +21,21 @@ public with sharing class ContactController {
     ********************************************************
     */
     @AuraEnabled(cacheable=true)
-    public static List<Contact> getContacts(String field, String sortOrder, Integer queryLimit, Integer queryOffset){
+    public static List<Contact> getContacts(String field, String sortOrder, Integer queryLimit, Integer queryOffset, String searchParam){
         try {
             String query = 'SELECT Id, FirstName, LastName, Email FROM Contact WITH SECURITY_ENFORCED';
+            if(String.isNotBlank(searchParam)){
+                searchParam='\'%' + String.escapeSingleQuotes(searchParam) + '%\'';
+                query +=' WHERE FirstName like '+searchParam+' OR LastName like '+searchParam+' OR Email like '+searchParam;
+            }
             if(field != null && sortOrder !=null){
                 query += ' ORDER BY '+field+' '+sortOrder;
             }
             if(queryLimit !=null && queryOffset!=null){
-                query +=' limit :queryLimit offset :queryOffset';
+                query +=' LIMIT :queryLimit OFFSET :queryOffset';
             }
-            return Database.query(String.escapeSingleQuotes(query));
+            
+            return Database.query(query);
         } catch (Exception e) {
             throw new AuraHandledException(e.getMessage());
         }

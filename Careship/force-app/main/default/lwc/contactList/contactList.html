@@ -4,15 +4,22 @@
       <lightning-layout multiple-rows="true" vertical-align="end">
         <!--<lightning-button label="Search" title="Click to perform search" slot="actions"
       onclick={performSearch}></lightning-button>-->
-        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4"
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="5" large-device-size="4"
           padding="around-small">
-          <lightning-input name="enter-search" label="Search when user hits the 'enter' key" type="search"
+          <lightning-input name="enter-search" label={searchLabel} type="search"
             onkeyup={handleKeyUp}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="1" medium-device-size="2" large-device-size="4"
+          padding="around-small">
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="11" medium-device-size="5" large-device-size="4"
+          padding="around-small">
+          <lightning-formatted-text value={currentInformation}></lightning-formatted-text>
         </lightning-layout-item>
         <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
           padding="around-small">
           <template if:true={contacts}>
-            <div class="border-design slds-scrollable_y" style="height: 12rem">
+            <div class="border-design slds-scrollable_y list-design">
               <lightning-datatable key-field="Id" columns={columns} data={contacts} hide-checkbox-column
                 sorted-by={sortBy} sorted-direction={sortDirection} onsort={doSorting} onrowaction={handleRowAction}
                 enable-infinite-loading={hasMoreRecords} onloadmore={loadMoreData} load-more-offset={limit}>

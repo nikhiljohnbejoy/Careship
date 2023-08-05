@@ -41,6 +41,7 @@ export default class ContactList extends NavigationMixin(
     LightningElement
 ) {
 
+    queryParam;
     contacts = [];
     error;
 
@@ -54,13 +55,15 @@ export default class ContactList extends NavigationMixin(
 
     hasMoreRecords = true;
 
-    queryTerm;
+    searchLabel = "Press enter to search on name and email";
+    searchParam = "";
 
     @wire(getContacts, {
         field: "$sortBy",
         sortOrder: "$sortDirection",
         queryLimit: "$limit",
-        queryOffset: "$offset"
+        queryOffset: "$offset",
+        searchParam: "$searchParam"
     })
     wiredContactList({ error, data }) {
         if (data) {
@@ -122,9 +125,16 @@ export default class ContactList extends NavigationMixin(
 
     handleKeyUp(evt) {
         const isEnterKey = evt.keyCode === 13;
-        if (isEnterKey) {
-            alert('Query for' + this.queryTerm);
-            this.queryTerm = evt.target.value;
+        if (isEnterKey && this.searchParam != evt.target.value) {
+            alert('Query for' + evt.target.value);
+            this.contacts = [];
+            this.searchParam = evt.target.value;
+            this.offset = 0;
+            this.hasMoreRecords = false;
         }
+    }
+    get currentInformation() {
+        let additional = this.hasMoreRecords ? `Scroll for more records` : `No more records available`;
+        return `Displaying ${this.contacts.length} records. ` + additional;
     }
 }
