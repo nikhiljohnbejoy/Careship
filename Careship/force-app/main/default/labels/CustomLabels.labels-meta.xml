@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Careship_ContactList_Search_Label</fullName>
+        <categories>Careship</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Careship ContactList Search Label</shortDescription>
+        <value>Press enter to search on name and email</value>
+    </labels>
+    <labels>
+        <fullName>Careship_ContactList_Title</fullName>
+        <categories>Careship</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Careship ContactList Title</shortDescription>
+        <value>Contact Information</value>
+    </labels>
+    <labels>
+        <fullName>Careship_Contact_Admin</fullName>
+        <categories>Careship</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Careship Contact Admin</shortDescription>
+        <value>Please contact your System Administrator.</value>
+    </labels>
+</CustomLabels>

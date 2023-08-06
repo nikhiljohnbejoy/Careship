@@ -13,5 +13,15 @@
         <members>Careship_Contacts</members>
         <name>FlexiPage</name>
     </types>
+    <types>
+      <members>Careship_ContactList_Search_Label</members>
+      <members>Careship_ContactList_Title</members>
+      <members>Careship_Contact_Admin</members>
+      <name>CustomLabel</name>
+    </types>
+    <types>
+        <members>Careship_contacts</members>
+        <name>StaticResource</name>
+    </types>
     <version>55.0</version>
 </Package>

@@ -1,12 +1,10 @@
 <template>
   <div class="border-design">
-    <lightning-card title="Contact Information" icon-name="standard:contact_list" class="slds-card_boundary">
+    <lightning-card title={label.title_Label} icon-name="standard:contact_list" class="slds-card_boundary">
       <lightning-layout multiple-rows="true" vertical-align="end">
-        <!--<lightning-button label="Search" title="Click to perform search" slot="actions"
-      onclick={performSearch}></lightning-button>-->
         <lightning-layout-item size="12" small-device-size="12" medium-device-size="5" large-device-size="4"
           padding="around-small">
-          <lightning-input name="enter-search" label={searchLabel} type="search"
+          <lightning-input name="enter-search" label={label.search_Label} type="search"
             onkeyup={handleKeyUp}></lightning-input>
         </lightning-layout-item>
         <lightning-layout-item size="12" small-device-size="1" medium-device-size="2" large-device-size="4"

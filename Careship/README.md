@@ -31,9 +31,9 @@ The user story can be divided into the following tasks and subtasks.
    - [x] Create Apex class `ContactController`.
    - [x] Create Apex test class `ContactControllerTest`.
    - [x] Create function `getContacts()` which would return a list of queried contacts with relevant fields(FirstName, LastName, Email).
-   - [] Apex test class to validate the functionality.
+   - [x] Apex test class to validate the functionality.
    - [x] _Optional_ Function `getContacts()` takes parameters for pagination.
-   - [] _Optional_ Function `getContacts()` takes parameters for search filtering.
+   - [x] _Optional_ Function `getContacts()` takes parameters for search filtering.
 
 2. Creation of the `contactList` lightning web component.<br/>
    _Subtasks_
@@ -43,7 +43,7 @@ The user story can be divided into the following tasks and subtasks.
    - [x] Use lightning-datatable component to display the list of queried contacts.
    - [x] _Optional_ : Sort records by any column in the list.
    - [x] _Optional_ : Add infinite scroll to the list.
-   - [] _Optional_ : Search filter based on one of the three fields.
+   - [x] _Optional_ : Search filter based on one of the three fields.
 
 3. Creation of a App Page<br/>
    _Subtasks_
