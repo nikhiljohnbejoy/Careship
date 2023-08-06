@@ -2,23 +2,29 @@
 
 This is the github repository for the development of the below user story.
 
+## How To Setup
+
+1. Deploy the components mentioned in manifest > package.xml
+2. Add the App page to the App where the component needs to be tested.
+3. If no contact records are available, the csv file available in the static resources can be inserted to the testing org.
+
 ## Create a Lightning web component that uses @wire in an Apex controller to retrieve contact records. Display the contact records in a lightning-datatable.
 
-1.1: Create an Apex controller that retrieves a list of contacts:
+1. Create an Apex controller that retrieves a list of contacts:
 
 ● Class: ContactController
 ● Method: getContacts()
 ● Fields to query: FirstName, LastName, Email
 
-1.2 : Create a Lightning web component that displays contacts in a table:
+2. Create a Lightning web component that displays contacts in a table:
 
 ● Component name: contactList
 ● Base component: lightning-datatable
 ● Fields to include: FirstName, LastName, Email
 
-1.3: Wire the getContacts() method
+3. Wire the getContacts() method
 
-1.4: Add the component to a new App page
+4. Add the component to a new App page
 
 ## Tasks assosiated with the user story
 
